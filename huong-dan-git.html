@@ -108,15 +108,15 @@ Bước 3. Mở website https://github.com/settings/keys New SSH key Giá nội 
 <h3 class="text-success">4. Chọn nhánh làm việc</h3>
 <p class="text-danger">Tạo nhánh mới</p>
 <pre>
-    git branch <branch-name>
+    git branch TenBuoi
 </pre>
 <p class="text-danger">Chuyển sang nhánh mới</p>
 <pre>
-    git checkout <branch-name>
+    git checkout TenBuoi
 </pre>
     <p class="text-danger"> Tạo nhánh và chuyển sang nhánh mới</p>
 <pre>
-    git checkout -b <branch-name>
+    git checkout -b TenBuoi
 </pre>
 <h3 class="text-success">5. Liên kết local repository(PC) với remote repository(Github)</h3>
 <p>Trên github.com tạo remote repository(Github)</p>
@@ -160,11 +160,12 @@ Bước 3. Mở website https://github.com/settings/keys New SSH key Giá nội 
 <h3 class="text-success">3. Đưa bài lên nhánh mới của remote respository đã tồn tại trên github</h3>
 <p>Mở cmd.exe và thực hiện các lệnh</p>
 <pre>
-    Bước 1. git add filename
-    Bước 2. git commit -m "ghi nội dung commit"
-    Bước 3. git checkout -b <branch-name>
-    Bước 4. git remote add origin git@github.com:hodienloi1981/cdudw1.ccq2211g.git
-    Bước 5. git push -u origin <branch-name>
+    Bước 1. git init
+    Bước 2. git add filename
+    Bước 3. git commit -m "ghi nội dung commit"
+    Bước 4. git checkout -b TenBuoi
+    Bước 5. git remote add origin git@github.com:hodienloi1981/cdudw1.ccq2211g.git
+    Bước 6. git push -u origin TenBuoi
 </pre>
 <p><u><i>Chú ý</i></u></p>
 <p>Bước 4. Đã có rồi thì không cần, kiểm tra bằng lệnh git config --list</p>

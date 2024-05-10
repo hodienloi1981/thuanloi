@@ -76,13 +76,16 @@ Bước 3. Mở website https://github.com/settings/keys New SSH key Giá nội 
     </pre>
     </div>
     <h2>III. Một số lệnh cơ bản</h2>
-    <h3 class="text-success">1. Khởi tạo init ở local repository</h3>
-    <p class="text-danger">Xem trạng thái và xem cấu hình</p>
+    <h3 class="text-success">1. Xem trạng thái và xem cấu hình</h3>
 <pre>
     git status
     git config --list
 </pre>
-    <h3 class="text-success">2. Chuyển file từ trạng thái workspace sang staging</h3>
+    <h3 class="text-success">2. Cấu hình git</h3>
+<pre>
+    git init
+</pre>
+    <h3 class="text-success">3. Thêm tập tin vào git</h3>
     <p class="text-danger">Thêm</p>
 <pre>
     git add file1 file2 folder1 folder2
@@ -96,7 +99,7 @@ Bước 3. Mở website https://github.com/settings/keys New SSH key Giá nội 
     Di chuyển file
     git mv <oldfilename> <newfilename>
 </pre>
-    <h3 class="text-success">3. Chuyển file từ trạng thái workspace, staging sang local repository</h3>
+    <h3 class="text-success">4. Chuyển file từ trạng thái workspace, staging sang local repository</h3>
     <p class="text-danger">Chuyển từ staging sang local repository</p>
 <pre>
     git commit -m "ghi nội dung commit"
@@ -105,7 +108,7 @@ Bước 3. Mở website https://github.com/settings/keys New SSH key Giá nội 
 <pre>
     git commit -a "ghi nội dung commit"
 </pre>
-<h3 class="text-success">4. Chọn nhánh làm việc</h3>
+<h3 class="text-success">5. Chọn nhánh làm việc</h3>
 <p class="text-danger">Tạo nhánh mới</p>
 <pre>
     git branch TenBuoi
@@ -118,7 +121,7 @@ Bước 3. Mở website https://github.com/settings/keys New SSH key Giá nội 
 <pre>
     git checkout -b TenBuoi
 </pre>
-<h3 class="text-success">5. Liên kết local repository(PC) với remote repository(Github)</h3>
+<h3 class="text-success">6. Liên kết local repository(PC) với remote repository(Github)</h3>
 <p>Trên github.com tạo remote repository(Github)</p>
 <p>Liên kết local repository(PC) với remote repository(Github)</p>
 <pre>
@@ -129,8 +132,9 @@ Bước 3. Mở website https://github.com/settings/keys New SSH key Giá nội 
     git remote remove origin
 </pre>
 
-<h3 class="text-success">6. Đưa nội dung từ local respository lên remote respository</h3>
-    git push -u origin <branch-name>
+<h3 class="text-success">7. Đưa nội dung từ local respository lên remote respository</h3>
+<pre>
+    git push -u origin TenNhanh
 </pre>
 
 <h2>IV. Đẩy project từ local repository(PC) lên remote repository(Github)</h2>

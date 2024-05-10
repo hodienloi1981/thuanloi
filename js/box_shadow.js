@@ -382,3 +382,9 @@ function copyCode(value) {
  alert("Đã chép: "+list_shabox[parseInt(value) - 1]);
  navigator.clipboard.writeText(list_shabox[parseInt(value) - 1]);
 }
+
+
+function readfilejson(filejson)
+{
+    fetch('https://server.com/data.json')
+}

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hướng dẫn git</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/css/bootstrap.min.css"
+integrity="sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg=="
+crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="css/thuanloi.css">
+</head>
+
+<body>
+    <header class="bg-dark">
+<div class="container-fluid">
+    <nav class="navbar navbar-expand-lg bg-dark" data-bs-theme="dark">
+<div class="container-fluid">
+    <a class="navbar-brand" href="index.html">THUẬN LỢI</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+aria-expanded="false" aria-label="Toggle navigation">
+<span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+<ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+    <li class="nav-item">
+<a class="nav-link" href="box-shadow.html">CSS box-shadow</a>
+    </li>
+    <li class="nav-item">
+<a class="nav-link" href="huong-dan-git.html">Hướng dẫn Git và Github</a>
+    </li>
+</ul>
+    </div>
+</div>
+    </nav>
+</div>
+    </header>
+    <main class="mb-5">
+<div class="container-fluid">
+    <h1 class="text-center text-success">GIT VÀ GITHUB.COM</h1>
+    <h2>I. Kiểm tra và cấu hình</h2>
+    <p>Bước 1. Cài đặt git, đăng ký tài khoản github.com</p>
+    <p>Bước 2. Kiểm tra version</p>
+    <div>
+<pre class="bg-info">
+Mở cmd.exe
+Gõ: git --version
+</pre>
+    </div>
+    <p>Bước 3. Cấu hình git trên máy tính</p>
+    <div>
+<pre>
+Mở cmd.exe
+Gõ: git config --global user.name "HoTen"
+Gõ: git config --global user.email "Email"
+Gõ: git config --list kiểm tra
+Xoá tên: git config --global --unset user.name
+Xoá email: git config --global --unset user.email
+    </pre>
+    </div>
+    <h2>II. Cấu hình SSH Key</h2>
+    <h3 class="text-success">Link thao khảo</h3>
+    <p>https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent?platform=windows
+    </p>
+    <p>https://www.youtube.com/watch?v=a-zX_qc2S-M</p>
+    <h3 class="text-success">Thực hiện:</h3>
+    </p>
+    <div>
+<pre class="bg-info rou">
+Mở cmd.exe và chạy các lệnh sau
+Bước 1. ssh-keygen -t ed25519 -C "your_email@gmail.com"
+Bước 2. Mở file tài C:\Users<NameUserPC>.ssh\id_ed25519.pub Sao chép nội dung trong tập tin
+Bước 3. Mở website https://github.com/settings/keys New SSH key Giá nội dung đã sao chép ở bước 2
+    </pre>
+    </div>
+    <h2>III. Một số lệnh cơ bản</h2>
+    <h3 class="text-success">1. Khởi tạo init ở local repository</h3>
+    <p class="text-danger">Xem trạng thái và xem cấu hình</p>
+<pre>
+    git status
+    git config --list
+</pre>
+    <h3 class="text-success">2. Chuyển file từ trạng thái workspace sang staging</h3>
+    <p class="text-danger">Thêm</p>
+<pre>
+    git add file1 file2 folder1 folder2
+    git add .
+    git add -A
+    git add --a
+</pre>
+<p class="text-danger">Xoá</p>
+<pre>
+    git rm --cached filename
+    Di chuyển file
+    git mv <oldfilename> <newfilename>
+</pre>
+    <h3 class="text-success">3. Chuyển file từ trạng thái workspace, staging sang local repository</h3>
+    <p class="text-danger">Chuyển từ staging sang local repository</p>
+<pre>
+    git commit -m "ghi nội dung commit"
+</pre>
+    <p class="text-danger">Chuyển từ workspace sang local repository</p>
+<pre>
+    git commit -a "ghi nội dung commit"
+</pre>
+<h3 class="text-success">4. Chọn nhánh làm việc</h3>
+<p class="text-danger">Tạo nhánh mới</p>
+<pre>
+    git branch <branch-name>
+</pre>
+<p class="text-danger">Chuyển sang nhánh mới</p>
+<pre>
+    git checkout <branch-name>
+</pre>
+    <p class="text-danger"> Tạo nhánh và chuyển sang nhánh mới</p>
+<pre>
+    git checkout -b <branch-name>
+</pre>
+<h3 class="text-success">5. Liên kết local repository(PC) với remote repository(Github)</h3>
+<p>Trên github.com tạo remote repository(Github)</p>
+<p>Liên kết local repository(PC) với remote repository(Github)</p>
+<pre>
+    git remote add origin git@github.com:hodienloi1981/cdudw1.ccq2211g.git
+</pre>
+<p>Nếu git remote sai chúng ta có thể xóa, say đó thiết lập lại</p>
+<pre>
+    git remote remove origin
+</pre>
+
+<h3 class="text-success">6. Đưa nội dung từ local respository lên remote respository</h3>
+    git push -u origin <branch-name>
+</pre>
+
+<h2>IV. Đẩy project từ local repository(PC) lên remote repository(Github)</h2>
+<h3 class="text-success">1. Lần đầu</h3>
+<p>Mở cmd.exe và thực hiện các lệnh</p>
+<pre>
+    Bước 1. git init
+    Bước 2. git add .
+    Bước 3. git commit -m "ghi nội dung commit"
+    Bước 4. git branch -M master
+    Bước 5. git remote add origin git@github.com:hodienloi1981/cdudw1.ccq2211g.git
+    Bước 6. git push -u origin master
+</pre>
+<p><u><i>Chú ý</i></u></p>
+<p>Bước 4. Mặc định là nhánh master nên khỏi cần</p>
+<h3 class="text-success">2. Đưa bài đề nhánh master đã tồn tại</h3>
+<p>Mở cmd.exe và thực hiện các lệnh</p>
+<pre>
+    Bước 1. git add filename
+    Bước 2. git commit -m "ghi nội dung commit"
+    Bước 3. git branch -M master
+    Bước 4. git remote add origin git@github.com:hodienloi1981/cdudw1.ccq2211g.git
+    Bước 5. git push -u origin master
+</pre>
+<p><u><i>Chú ý</i></u></p>
+<p>Bước 4. Đã có rồi thì không cần, kiểm tra bằng lệnh git config --list</p>
+<h3 class="text-success">3. Đưa bài lên nhánh mới của remote respository đã tồn tại trên github</h3>
+<p>Mở cmd.exe và thực hiện các lệnh</p>
+<pre>
+    Bước 1. git add filename
+    Bước 2. git commit -m "ghi nội dung commit"
+    Bước 3. git checkout -b <branch-name>
+    Bước 4. git remote add origin git@github.com:hodienloi1981/cdudw1.ccq2211g.git
+    Bước 5. git push -u origin <branch-name>
+</pre>
+<p><u><i>Chú ý</i></u></p>
+<p>Bước 4. Đã có rồi thì không cần, kiểm tra bằng lệnh git config --list</p>
+</div>
+    </main>
+    <footer class="bg-dark text-white py-3">
+<div class="container-fluid text-center">
+    <a href="http://thuanloi.edu.vn" class="nav-link">Thuận Lợi</a>
+</div>
+    </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.bundle.min.js"
+integrity="sha512-7Pi/otdlbbCR+LnW+F7PwFcSDJOuUJB3OxtEHbg4vSMvzvJjde4Po1v4BR9Gdc9aXNUNFVUY+SK51wWT8WF0Gg=="
+crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</body>
+
+</html>

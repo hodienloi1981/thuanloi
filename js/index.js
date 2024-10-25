@@ -9,8 +9,8 @@ const list_link = [
 const list_baitap = [
     { 'name': 'Bài tập 1', 'link': 'baitap/bai1.html', 'thumbnail': 'images/bai1.png' },
     { 'name': 'Bài tập 2', 'link': 'baitap/bai2.html', 'thumbnail': 'images/bai2.png' },
-    { 'name': 'Bài tập 3', 'link': 'baitap/bai3.html', 'thumbnail': 'images/bai1.jpg' },
-    { 'name': 'Bài tập 4', 'link': 'baitap/bai4.html', 'thumbnail': 'images/bai1.jpg' },
+    { 'name': 'Bài tập 3', 'link': 'baitap/bai3.html', 'thumbnail': 'images/bai3.png' },
+    { 'name': 'Bài tập 4', 'link': 'baitap/bai4.html', 'thumbnail': 'images/bai4.png' },
     { 'name': 'Bài tập 5', 'link': 'baitap/bai5.html', 'thumbnail': 'images/bai1.jpg' },
     { 'name': 'Bài tập 6', 'link': 'baitap/bai6.html', 'thumbnail': 'images/bai1.jpg' },
     { 'name': 'Bài tập 7', 'link': 'baitap/bai7.html', 'thumbnail': 'images/bai1.jpg' },

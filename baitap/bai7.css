@@ -1,0 +1,70 @@
+body {
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    background-color: red;
+}
+
+.box-content {
+    width: 400px;
+    height: auto;
+    background-color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    gap: 10px;
+    border-radius: 10px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+}
+
+.box-content .image {
+    flex-grow: 3;
+}
+
+.box-content .image img {
+    max-width: 100%;
+}
+
+.box-content .info {
+    flex-grow: 9;
+}
+
+.box-content .info h3 {
+    text-transform: uppercase;
+    font-weight: 800;
+    padding: 0px;
+    margin: 0px;
+}
+
+.box-content .info p {
+    font-size: 120%;
+}
+
+.box-content .info>.copy_cre {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.box-content .info>.copy_cre button {
+    background-color: rgb(218, 93, 137);
+    border-radius: 15px;
+    padding: 8px;
+    border: 1px solid rgb(218, 93, 137);
+    font-size: 110%;
+    color: white;
+}
+
+.box-content .info>.copy_cre a {
+    text-decoration: none;
+    color: blue;
+    font-weight: 700;
+}

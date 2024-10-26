@@ -11,10 +11,10 @@ const list_baitap = [
     { 'name': 'Bài tập 2', 'link': 'baitap/bai2.html', 'thumbnail': 'images/bai2.png' },
     { 'name': 'Bài tập 3', 'link': 'baitap/bai3.html', 'thumbnail': 'images/bai3.png' },
     { 'name': 'Bài tập 4', 'link': 'baitap/bai4.html', 'thumbnail': 'images/bai4.png' },
-    { 'name': 'Bài tập 5', 'link': 'baitap/bai5.html', 'thumbnail': 'images/bai1.jpg' },
-    { 'name': 'Bài tập 6', 'link': 'baitap/bai6.html', 'thumbnail': 'images/bai1.jpg' },
-    { 'name': 'Bài tập 7', 'link': 'baitap/bai7.html', 'thumbnail': 'images/bai1.jpg' },
-    { 'name': 'Bài tập 8', 'link': 'baitap/bai8.html', 'thumbnail': 'images/bai1.jpg' },
+    { 'name': 'Bài tập 5', 'link': 'baitap/bai5.html', 'thumbnail': 'images/bai5.png' },
+    { 'name': 'Bài tập 6', 'link': 'baitap/bai6.html', 'thumbnail': 'images/bai6.png' },
+    { 'name': 'Bài tập 7', 'link': 'baitap/bai7.html', 'thumbnail': 'images/bai7.png' },
+    { 'name': 'Bài tập 8', 'link': 'baitap/bai8.html', 'thumbnail': 'images/bai8.png' },
     { 'name': 'Bài tập 9', 'link': 'baitap/bai9.html', 'thumbnail': 'images/bai1.jpg' },
     { 'name': 'Bài tập 10', 'link': 'baitap/bai10.html', 'thumbnail': 'images/bai1.jpg' },
     { 'name': 'Bài tập 11', 'link': 'baitap/bai11.html', 'thumbnail': 'images/bai1.jpg' },
@@ -47,6 +47,7 @@ const list_baitap = [
     { 'name': 'Bài tập 38', 'link': 'baitap/bai38.html', 'thumbnail': 'images/bai1.jpg' },
     { 'name': 'Bài tập 39', 'link': 'baitap/bai39.html', 'thumbnail': 'images/bai1.jpg' },
     { 'name': 'Bài tập 40', 'link': 'baitap/bai40.html', 'thumbnail': 'images/bai1.jpg' },
+    { 'name': 'Menu Mobile', 'link': 'baitap/menu1.html', 'thumbnail': 'images/menu1.png' },
 
 ]
 var list_link_rowdata = ``;
@@ -62,7 +63,7 @@ list_baitap.forEach(function (item, index) {
         <div class="col-6 col-md-3 mb-3">
             <div class="border">
                 <a href="${item.link}">
-                    <img class="img-fluid w-100" src="${item.thumbnail}" />
+                    <img class="img-fluid w-100 ratio ratio-16x9" src="${item.thumbnail}" />
                     <h3 class="text-center fs-5 py-2">${item.name}</h3>
                 </a>
             </div>

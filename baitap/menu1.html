@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Menu Mobile</title>
+    <link rel="stylesheet" href="background1.css">
+</head>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .mainmenu {
+        background: blue;
+        height: 60px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .mainmenu .logo {
+        color: white;
+        margin-left: 20px;
+        font-size: 26px;
+        font-weight: 700;
+    }
+
+    .mainmenu ul.menu {
+        box-sizing: border-box;
+        visibility: hidden;
+        position: absolute;
+        width: 100%;
+        height: calc(100vh - 60px);
+        left: -100%;
+        top: 60px;
+        background-color: aqua;
+        width: 100%;
+        padding: 10px;
+        margin: 0px;
+        list-style: none;
+        transition: all 0.5s ease-in-out;
+        border-radius: 0% 50% 50% 0;
+    }
+
+    .mainmenu ul.menu li {
+        cursor: pointer;
+    }
+
+    .mainmenu ul.menu li a {
+        text-decoration: none;
+        color: black;
+        display: block;
+        padding: 7px 10px;
+        font-size: 18px;
+    }
+
+    .mainmenu ul.menu li:hover {
+        background-color: rgb(45, 234, 234);
+    }
+
+    .mainmenu input {
+        display: none;
+    }
+
+    .mainmenu label {
+        cursor: pointer;
+        color: white;
+        margin-right: 20px;
+    }
+
+    .mainmenu label i {
+        font-size: 150%;
+    }
+
+    .mainmenu input[type="checkbox"]:checked+ul.menu {
+        visibility: visible;
+        left: 0;
+        border-radius: 0;
+    }
+</style>
+
+<body>
+    <div class="wrapper">
+        <div class="box">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+    </div>
+    <nav class="mainmenu">
+        <div class="logo">LOGO</div>
+        <label for="toggle">
+            <i class="fa-solid fa-bars"></i>
+        </label>
+        <input type="checkbox" id="toggle">
+        <ul class="menu">
+            <li><a href="#">Trang chủ</a></li>
+            <li><a href="#">Giới thiệu</a></li>
+            <li><a href="#">Sản phẩm</a></li>
+            <li><a href="#">Bài viết</a></li>
+            <li><a href="#">Liên hệ</a></li>
+        </ul>
+    </nav>
+</body>
+
+</html>
